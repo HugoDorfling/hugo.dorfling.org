@@ -7,13 +7,8 @@ export const App = () => {
   return (
     <div>
       <h1>Hugo Dorfling Portfolio</h1>
-      <img
-        src={MyImage}
-        alt="Image of Hugo"
-        width="300"
-        height="300"
-      />
-      <img src={LOGO} alt="Logo Image" width="300" height="300" />
+      <img src={MyImage} alt="Hugo" width="300" height="300" />
+      <img src={LOGO} alt="Logo" width="300" height="300" />
       <Counter />
     </div>
   );
