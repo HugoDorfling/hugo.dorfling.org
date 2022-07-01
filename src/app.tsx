@@ -1,7 +1,7 @@
-import "./styles.css";
-import MyImage from "./assets/me.jpg";
-import LOGO from "./assets/logo.svg";
-import { Counter } from "./counter";
+import './styles.css';
+import MyImage from './assets/me.jpg';
+import LOGO from './assets/logo.svg';
+import { Counter } from './counter';
 
 export const App = () => {
   return (
