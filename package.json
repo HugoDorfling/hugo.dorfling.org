@@ -1,0 +1,12 @@
+{
+  "name": "hugo.dorfling.org",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hugo Dorfling <hugodorfling@live.co.za> (http://hugo.dorfling.org/)",
+  "license": "MIT"
+}
