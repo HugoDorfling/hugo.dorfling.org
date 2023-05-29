@@ -1,5 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 import {
   motionValue,
   useInView,
@@ -16,7 +18,7 @@ const AnimatedNumbers = ({ value }: any) => {
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -103,7 +105,7 @@ const About = () => {
             <div className="col-span-2 flex flex-col items-end justify-between">
               <div className="flex flex-col items-end just">
                 <span className="inline-block text-7xl font-bold">
-                  <AnimatedNumbers value={50} />
+                  <AnimatedNumbers value={50} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   Satisfied clients
@@ -111,7 +113,7 @@ const About = () => {
               </div>
               <div className="flex flex-col items-end just">
                 <span className="inline-block text-7xl font-bold">
-                  <AnimatedNumbers value={20} />
+                  <AnimatedNumbers value={20} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   Satisfied clients
@@ -119,6 +121,8 @@ const About = () => {
               </div>
             </div>
           </div>
+          <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
