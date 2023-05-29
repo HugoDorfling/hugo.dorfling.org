@@ -7,13 +7,9 @@ const LiIcon = ({ reference }: any) => {
     offset: ["center end", "center center"],
   });
 
-  useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
-
   return (
     <figure className="absolute left-0 stroke-dark">
-      <svg width="75" height="75" viewBox="0 0 100 100">
+      <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
         <circle
           cx="75"
           cy="50"
@@ -29,7 +25,12 @@ const LiIcon = ({ reference }: any) => {
             pathLength: scrollYProgress,
           }}
         />
-        <circle cx="75" cy="50" r="10" className="fill-primary stroke-1" />
+        <circle
+          cx="75"
+          cy="50"
+          r="10"
+          className="fill-primary stroke-1 animate-pulse"
+        />
       </svg>
     </figure>
   );

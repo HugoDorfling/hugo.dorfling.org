@@ -17,7 +17,11 @@ const Details = ({
       className="my-8 text-black/75 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
     >
       <LiIcon reference={ref} />
-      <div>
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, type: "spring" }}
+      >
         <h3 className="capitalize font-bold text-2xl">
           {position}&nbsp;
           <a
@@ -32,7 +36,7 @@ const Details = ({
           {time} | {address}
         </span>
         <p className="font-medium w-full">{work}</p>
-      </div>
+      </motion.div>
     </li>
   );
 };
@@ -50,7 +54,7 @@ const Experience = () => {
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
-          className="absolute left-8 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 ">
