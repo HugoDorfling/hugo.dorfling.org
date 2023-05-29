@@ -35,7 +35,7 @@ const NavBar = () => {
       className="w-fu
      px-32 py-8 font-medium"
     >
-      <nav>
+      <nav className="text-dark/75">
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
