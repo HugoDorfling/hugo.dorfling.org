@@ -71,12 +71,7 @@ export default function Home() {
           className="absolute 
         right-8 bottom-8 inline-block w-24"
         >
-          <Image
-            src={lightBulb}
-            alt="Hugo"
-            className="w-full h-auto
-          "
-          />
+          <Image src={lightBulb} alt="Hugo" className="w-full h-auto" />
         </div>
       </main>
     </>
