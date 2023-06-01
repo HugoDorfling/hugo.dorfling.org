@@ -47,8 +47,6 @@ const useThemeSwitcher = () => {
     }
   }, [mode]);
 
-  console.log("mode from hook: ", mode);
-
   return [mode, setMode] as const;
 };
 

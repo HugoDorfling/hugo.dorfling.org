@@ -44,6 +44,7 @@ const NavBar = () => {
   return (
     <header
       className="w-full
+      flex justify-between
      px-32 py-8 font-medium text-dark/75
      dark:text-light"
     >
@@ -56,20 +57,7 @@ const NavBar = () => {
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>
-      <button
-        onClick={() => {
-          setMode(mode === "light" ? "dark" : "light");
-        }}
-        className={`ml-3 flex items-center justify-center rounded-full p-1
-        ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-        `}
-      >
-        {mode === "dark" ? (
-          <SunIcon className={"fill-dark text-dark "} />
-        ) : (
-          <MoonIcon className={"fill-dark text-light"} />
-        )}
-      </button>
+
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
           href="https://github.com/HugoDorfling"
@@ -78,7 +66,7 @@ const NavBar = () => {
           whileTap={{ scale: 0.9 }}
           className="w-6 mx-3"
         >
-          <GitHubIcon className="text-dark shadow-sm" />
+          <GitHubIcon className="text-dark shadow-sm w-full h-full" />
         </motion.a>
         <motion.a
           href="https://za.linkedin.com/in/leslie-hugo-dorfling"
@@ -89,15 +77,22 @@ const NavBar = () => {
         >
           <LinkedInIcon />
         </motion.a>
-        <motion.a
-          href="/projects"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 ml-3"
+        <button
+          onClick={() => {
+            setMode(mode === "light" ? "dark" : "light");
+          }}
+          style={{ background: "rgb(27,27,27)" }}
+          className={`ml-3 flex items-center justify-center rounded-full p-1
+        
+        ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+        `}
         >
-          <LightDarkIcon />
-        </motion.a>
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark text-dark "} />
+          ) : (
+            <MoonIcon className={"fill-dark text-light"} />
+          )}
+        </button>
       </nav>
     </header>
   );
