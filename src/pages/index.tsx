@@ -42,6 +42,9 @@ export default function Home() {
                 image-blurred-edge
                 shadow-xl
                 "
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">

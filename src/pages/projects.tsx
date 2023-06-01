@@ -24,6 +24,10 @@ const FeaturedProject = ({ type, title, summary, img, link, github }: any) => {
           src={img}
           alt={title}
           className="w-full h-auto p-1 rounded-tl-[25px] rounded-bl-[25px]"
+          priority
+          sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
         />
       </Link>
 

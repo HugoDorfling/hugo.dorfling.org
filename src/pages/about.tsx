@@ -286,54 +286,90 @@ const About = () => {
                 src={profilePic}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={youngMe}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={shirtDesign}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={band}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={school}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={counselor}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={youthLeader}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={investec}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={howler}
                 alt="hugo"
                 className="w-full h-auto rounded 2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
               />
             </div>
 
