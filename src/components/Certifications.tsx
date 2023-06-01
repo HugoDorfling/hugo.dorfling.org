@@ -27,7 +27,7 @@ const Details = ({ type, time, place, info }: any) => {
   );
 };
 
-const Education = () => {
+const Certifications = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -35,40 +35,55 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h2
+      <h3
         className="font-bold text-8xl mb-32 w-full text-center text-dark/75
       dark:text-light"
       >
-        Education
-      </h2>
+        Certifications
+      </h3>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
           style={{ scaleY: scrollYProgress }}
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 ">
           <Details
-            type="National Senior Certificate"
-            time="Finished in 2013"
-            place="Highschool Eldoraigne"
-            info="87% Average Final (IT, Accounting, Physical Sciences)"
+            type="Certified ScrumMaster"
+            time="Feb 2023"
+            place="Scrum Alliance"
+            info=""
           />
           <Details
-            type="Bachelor of Commerce in Informatics "
-            time="Jan. 2017 to Dec. 2017"
-            place="University of Pretoria"
-            info="Not complete (83.20% Average Semester 1) - Transition to Computer Science"
+            type="Certified Scrum Product Owner"
+            time="Feb 2023"
+            place="Scrum Alliance"
+            info=""
           />
           <Details
-            type="Bachelor Of Science in Computer Science"
-            time="Apr. 2022 to Sep. 2022 / 6 months"
-            place="University of London - Coursera"
-            info="5 Subjects completed - T.B.C"
+            type="AWS Certified Cloud Practitioner"
+            time="Oct 2020"
+            place="AWS"
+            info=""
           />
+          <Details
+            type="AWS Certified Solutions Architect Associate"
+            time="Oct 2020"
+            place="AWS"
+            info=""
+          />
+          <Details
+            type="AWS Certified Developer Associate"
+            time="Oct 2020"
+            place="AWS"
+            info=""
+          />
+
+          <Details type="CompTIA A+" time="Feb 2019" place="CompTIA" info="" />
+          <Details type="CompTIA N+" time="Feb 2019" place="CompTIA" info="" />
         </ul>
       </div>
     </div>
   );
 };
 
-export default Education;
+export default Certifications;

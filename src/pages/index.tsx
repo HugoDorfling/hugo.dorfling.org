@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -9,7 +9,16 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/icons";
 import HireMe from "@/components/HireMe";
-import lightBulb from "~/images/svgs/miscellaneous_icons_1.svg";
+import Background from "~/images/svgs/miscellaneous_icons_1.svg";
+
+const sectionStyle: CSSProperties = {
+  width: "100%",
+  height: "200px",
+  position: "absolute",
+  left: "96%",
+  top: "50%",
+  backgroundImage: "url(/images/svgs/miscellaneous_icons_1.svg)",
+};
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +38,10 @@ export default function Home() {
               <Image
                 src={profilePic}
                 alt="Hugo Dorfling"
-                className="w-full h-auto rounded-full"
+                className="w-[80%] h-auto rounded-[90px]
+                image-blurred-edge
+                shadow-xl
+                "
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
@@ -56,38 +68,16 @@ export default function Home() {
                 exhilarating passion to find disruptive and elegant solutions
                 presented in delightful experiences.
               </p>
-              <p className="my-4 text-base font-medium">
-                I have done studies in BCom Informatics and BSc Computer
-                Science, both incomplete degrees, and I’ve discovered, through
-                practical work experience, on real products, where I add the
-                most value. I combine my years of experience as Graphic Designer
-                in my youth, with my communication skills gained through
-                Counseling / Church Ministry, Analysis and Systems & Design
-                Thinking from BCom Informatics studies, Technical Acumen from my
-                IT experience and Software Product Engineering and Computer
-                Science from my years as a Software Engineer into a role that
-                focuses on bringing all areas of product development and
-                business together to make remarkable and life-changing products
-                that make a difference in peoples lives through servant
-                leadership, collaboration and strong determination towards
-                realizing a worthwhile vision.
-              </p>
-              <p className="my-4 text-base font-medium">
-                I thrive in a highly autonomous and collaborative environment
-                where discovery, exploration and learning are highly valued
-                through the three pillars of empiricism, namely Transparency,
-                Inspection and Adaptation. I care deeply about truly connecting
-                with fellow humans and building lasting relationships that are
-                meaningful through empathy and love.
-              </p>
+
               <div className="flex items-center self-start mt-2">
                 <Link
-                  href="/dummy.pdf"
+                  href="/hugo-cv-may-2023.pdf"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6 
                   rounded-lg text-lg font-semibold
                   hover:bg-light hover:text-dark
-                  border border-solid border-transparent hover:border-dark"
+                  border border-solid border-transparent hover:border-dark
+                  dark:bg-light dark:hover:text-light dark:hover:bg-dark dark:text-dark dark:hover:border-light"
                   download={true}
                 >
                   Resume <LinkArrow className={"w-6 ml-1"} />
@@ -95,7 +85,10 @@ export default function Home() {
                 <Link
                   href="mailto:hugodorfling@live.co.za"
                   target={"_blank"}
-                  className="ml-4 text-lg font-medium capitalize text-dark underline"
+                  className="ml-4 text-lg 
+                  font-medium capitalize 
+                  text-dark underline
+                  dark:text-light"
                 >
                   Projects / Portfolio
                 </Link>
@@ -104,12 +97,16 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div
-          className="absolute 
+        <section
+          className=" 
         right-8 bottom-8 inline-block w-24"
-        >
-          <Image src={lightBulb} alt="Hugo" className="w-full h-auto" />
-        </div>
+          style={{
+            ...sectionStyle,
+            backgroundPosition: "fit",
+            backgroundSize: "fit",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></section>
       </main>
     </>
   );

@@ -2,13 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
-import {
-  GitHubIcon,
-  LightDarkIcon,
-  LinkedInIcon,
-  MoonIcon,
-  SunIcon,
-} from "./icons";
+import { GitHubIcon, LinkedInIcon, MoonIcon, SunIcon } from "./icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./useThemeSwitcher";
 
@@ -52,7 +46,6 @@ const NavBar = () => {
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Articles" className="ml-4" />
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
@@ -66,7 +59,7 @@ const NavBar = () => {
           whileTap={{ scale: 0.9 }}
           className="w-6 mx-3"
         >
-          <GitHubIcon className="text-dark shadow-sm w-full h-full" />
+          <GitHubIcon className="text-dark shadow-sm w-full h-full dark:text-light" />
         </motion.a>
         <motion.a
           href="https://za.linkedin.com/in/leslie-hugo-dorfling"
@@ -81,9 +74,10 @@ const NavBar = () => {
           onClick={() => {
             setMode(mode === "light" ? "dark" : "light");
           }}
-          style={{ background: "rgb(27,27,27)" }}
+          style={{
+            background: mode === "light" ? "rgb(27,27,27)" : "rgb(255,255,255)",
+          }}
           className={`ml-3 flex items-center justify-center rounded-full p-1
-        
         ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
         `}
         >
