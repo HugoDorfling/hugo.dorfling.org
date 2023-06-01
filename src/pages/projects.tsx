@@ -11,9 +11,10 @@ const FeaturedProject = ({ type, title, summary, img, link, github }: any) => {
   return (
     <article
       className="w-full flex items-center justify-between 
-    rounded-3xl border border-solid border-dark bg-light shadow-2xl relative"
+    rounded-3xl border border-solid border-dark bg-light shadow-2xl relative
+    dark:border-light dark:bg-dark"
     >
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark  dark:bg-light rounded-br-3xl" />
       <Link
         href={link}
         target="_blank"
@@ -33,17 +34,21 @@ const FeaturedProject = ({ type, title, summary, img, link, github }: any) => {
           target="_blank"
           className="hover:underline underline-offset-2 "
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold text-dark">
+          <h2 className="my-2 w-full text-left text-4xl font-bold text-dark dark:text-light">
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
-          <Link className="w-10 text-dark" href={github} target="_blank">
+          <Link
+            className="w-10 text-dark dark:text-light"
+            href={github}
+            target="_blank"
+          >
             <GitHubIcon />
           </Link>
           <Link
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+            className="ml-4 rounded-lg bg-dark dark:bg-light dark:text-dark text-light p-2 px-6 text-lg font-semibold"
             href={link}
             target="_blank"
           >
@@ -59,9 +64,14 @@ const Project = ({ type, title, img, link, github }: any) => {
   return (
     <article
       className="w-full flex flex-col items-center justify-center 
-    rounded-2xl border border-solid border-dark bg-light p-6 relative"
+    rounded-2xl border border-solid border-dark bg-light 
+    dark:border-light dark:bg-dark p-6 relative"
     >
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+      <div
+        className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] 
+      bg-dark rounded-br-3xl
+      dark:bg-light"
+      />
       <Link
         href={link}
         target="_blank"
@@ -81,12 +91,19 @@ const Project = ({ type, title, img, link, github }: any) => {
           target="_blank"
           className="hover:underline underline-offset-2 "
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold text-dark">
+          <h2
+            className="my-2 w-full text-left text-4xl font-bold text-dark
+          dark:text-light"
+          >
             {title}
           </h2>
         </Link>
-        <div className="mt-2 flex items-center">
-          <Link className="w-10 text-dark" href={github} target="_blank">
+        <div className="mt-2 flex items-center justify-between">
+          <Link
+            className="w-10 text-dark dark:text-light mr-4"
+            href={github}
+            target="_blank"
+          >
             <GitHubIcon />
           </Link>
           <Link
@@ -109,10 +126,16 @@ const Projects = () => {
         <title>Hugo | Projects</title>
         <meta name="Projects" content="Hugo projects" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center text-dark/75">
+      <main
+        className="w-full mb-16 flex flex-col items-center justify-center text-dark/75
+      dark:text-light"
+      >
         <Layout className="pt-16">
-          <AnimatedText text="Imagination trumps knowledge" />
-          <div className="grid grid-cols-12 gap-y-32">
+          <AnimatedText
+            text="Imagination trumps knowledge"
+            className="dark:text-light"
+          />
+          <div className="grid grid-cols-12 gap-y-32 gap-x-16">
             <div className="col-span-12">
               <FeaturedProject
                 title="Analytics Dashboard"

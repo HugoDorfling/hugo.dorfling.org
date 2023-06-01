@@ -20,7 +20,6 @@ export default function App({ Component, pageProps }: any) {
       <main
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
-        Test
         <NavBar />
         <Component {...pageProps} />
         <Footer />

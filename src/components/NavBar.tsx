@@ -43,7 +43,7 @@ const NavBar = () => {
 
   return (
     <header
-      className="w-fu
+      className="w-full
      px-32 py-8 font-medium text-dark/75
      dark:text-light"
     >
@@ -60,12 +60,14 @@ const NavBar = () => {
         onClick={() => {
           setMode(mode === "light" ? "dark" : "light");
         }}
-        className="ml-3 flex items-center justify-center rounded-full p-1"
+        className={`ml-3 flex items-center justify-center rounded-full p-1
+        ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+        `}
       >
         {mode === "dark" ? (
-          <SunIcon className={"fill-light text-light "} />
+          <SunIcon className={"fill-dark text-dark "} />
         ) : (
-          <MoonIcon className={"fill-dark text-dark"} />
+          <MoonIcon className={"fill-dark text-light"} />
         )}
       </button>
       <nav className="flex items-center justify-center flex-wrap">
