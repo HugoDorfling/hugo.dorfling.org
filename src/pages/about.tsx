@@ -58,10 +58,16 @@ const About = () => {
         <Layout>
           <AnimatedText
             text="Passion fuels purpose!"
-            className="mb-16 dark:text-light"
+            className="mb-16 dark:text-light lg:!text-5xl sm:!text-3xl xs:!text-1xl"
           />
-          <div className="grid w-full grid-cols-8 gap-16 text-dark/75 dark:text-light">
-            <div className="col-span-3 flex flex-col items-start justify-start dark:text-light">
+          <div
+            className="grid w-full grid-cols-8 gap-16 text-dark/75 
+          dark:text-light sm:gap-8 sm:flex sm:flex-col"
+          >
+            <div
+              className="col-span-3 flex flex-col items-start 
+            justify-start dark:text-light xl:col-span-4"
+            >
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light">
                 Biography
               </h2>

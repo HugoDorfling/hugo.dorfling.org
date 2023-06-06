@@ -40,7 +40,7 @@ const AnimatedText = ({ text, className = "" }: any) => {
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`inline-block w-full text-dark font-bold capitalize text-8xl ${className}`}
+        className={`inline-block w-full text-dark font-bold capitalize text-8xl ${className} md:text-4xl sm:text-xl`}
       >
         {text.split(" ").map((word: string, index: number) => {
           return (

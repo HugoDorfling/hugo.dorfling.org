@@ -16,7 +16,8 @@ const Details = ({
       ref={ref}
       className="my-8 text-black/75 first:mt-0 last:mb-0 w-[60%] 
       mx-auto flex flex-col items-center justify-between
-      dark:text-light"
+      dark:text-light md:text-sm"
+      style={{ border: "1px solid red" }}
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -24,7 +25,7 @@ const Details = ({
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">
+        <h3 className="capitalize font-bold text-2xl sm:text-sm">
           {position}&nbsp;
           <a
             href={companyLink}
@@ -53,7 +54,7 @@ const Experience = () => {
     <div className="my-64">
       <h2
         className="font-bold text-8xl mb-32 w-full text-center text-dark/75 
-      dark:text-light"
+      dark:text-light lg:-text-6xl md:text-4xl sm:text-2xl"
       >
         Experience
       </h2>

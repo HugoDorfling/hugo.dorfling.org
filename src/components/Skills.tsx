@@ -30,7 +30,9 @@ const Skills = () => {
       dark:bg-circularDark"
       >
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark"
+          className="flex items-center justify-center 
+          rounded-full font-semibold bg-dark text-light p-8 shadow-dark
+          "
           whileHover={{ scale: 1.05 }}
         >
           Web
