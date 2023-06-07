@@ -17,7 +17,6 @@ const Details = ({
       className="my-8 text-black/75 first:mt-0 last:mb-0 w-[60%] 
       mx-auto flex flex-col items-center justify-between
       dark:text-light md:text-sm"
-      style={{ border: "1px solid red" }}
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -58,12 +57,16 @@ const Experience = () => {
       >
         Experience
       </h2>
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[75%] mx-auto relative sm:w-[100%]">
         <motion.div
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
           style={{ scaleY: scrollYProgress }}
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4 ">
+        <ul
+          className="w-full flex flex-col items-start 
+        justify-between ml-4 
+        "
+        >
           <Details
             position="Software Engineer"
             company="Klar Insights GmbH"

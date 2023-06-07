@@ -10,7 +10,11 @@ const Footer = () => {
     font-medium text-lg
     dark:text-light dark:border-light"
     >
-      <Layout className="py-8 text-dark flex items-center justify-between dark:text-light">
+      <Layout
+        className="py-8 text-dark 
+      flex items-center justify-between dark:text-light
+      sm:flex-col sm:text-center"
+      >
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div>
           Built with{" "}
@@ -29,13 +33,6 @@ const Footer = () => {
             Hugo
           </Link>
         </div>
-        <Link
-          href="/"
-          target={"_blank"}
-          className="underline underline-offset-2"
-        >
-          Say hello
-        </Link>
       </Layout>
     </footer>
   );

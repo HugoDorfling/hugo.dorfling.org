@@ -17,7 +17,9 @@ const Details = ({ type, time, place, info }: any) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">{type}&nbsp;</h3>
+        <h3 className="capitalize font-bold text-2xl sm:text-xl">
+          {type}&nbsp;
+        </h3>
         <span className="captilize font-medium text-dark/75">
           {time} | {place}
         </span>
@@ -41,7 +43,11 @@ const Certifications = () => {
       >
         Certifications
       </h3>
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div
+        ref={ref}
+        className="w-[75%] mx-auto relative
+      sm:w-full"
+      >
         <motion.div
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
           style={{ scaleY: scrollYProgress }}

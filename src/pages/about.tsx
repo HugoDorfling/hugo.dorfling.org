@@ -55,7 +55,7 @@ const About = () => {
         <meta name="About me" content="My about page" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
-        <Layout>
+        <Layout className="sm:!p-12">
           <AnimatedText
             text="Passion fuels purpose!"
             className="mb-16 dark:text-light lg:!text-5xl sm:!text-3xl xs:!text-1xl"
@@ -379,7 +379,10 @@ const About = () => {
               />
             </div>
 
-            <div className="col-span-2 flex flex-col items-end justify-between">
+            <div
+              className="col-span-2 flex flex-col items-end justify-between
+              sm:items-center sm:my-4"
+            >
               <div className="flex flex-col items-end just">
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={28} />
